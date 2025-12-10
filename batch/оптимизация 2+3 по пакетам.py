@@ -106,7 +106,7 @@ def check_goldbach_parallel(max_N, num_processes=None):
 
         if not is_valid:
             all_valid = False
-            counterexample = data  # data содержит N при ошибке
+            counterexample = data  
             print(f"Процесс {process_id}: найден контрпример N = {counterexample}")
 
     end_time = time.time()
@@ -128,4 +128,5 @@ def check_goldbach_parallel(max_N, num_processes=None):
 if __name__ == "__main__":
     print("Проверка гипотезы Гольдбаха (Параллельная версия с решетом)")
     max_N = 50000
+
     result = check_goldbach_parallel(max_N)
