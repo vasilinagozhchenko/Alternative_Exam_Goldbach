@@ -7,7 +7,7 @@ def sieve_of_eratosthenes_naive(max_n):
 
     for i in range(2, max_n + 1):
         if is_prime[i]:
-            for j in range(i * 2, max_n + 1, i):
+            for j in range(i * i, max_n + 1, i):
                 is_prime[j] = False
     return is_prime
 
@@ -71,4 +71,5 @@ def batch(max_N):
 if __name__ == "__main__":
     print("Проверка гипотезы Гольдбаха (Решето Эратосфена):")
     max_N = 50000
+
     result = batch(max_N)
