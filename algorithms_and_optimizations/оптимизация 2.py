@@ -6,7 +6,7 @@ def sieve_of_eratosthenes(max_n):
     is_prime[0] = is_prime[1] = False
     for i in range(2, max_n + 1):
         if is_prime[i]:
-            for j in range(i * 2, max_n + 1, i):
+            for j in range(i * i, max_n + 1, i):
                 is_prime[j] = False
     return is_prime
 
@@ -35,4 +35,5 @@ def check_goldbach_sieve_naive(max_N):
 
 if __name__ == "__main__":
     max_N = 50000
+
     result = check_goldbach_sieve_naive(max_N)
